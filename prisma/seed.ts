@@ -128,6 +128,18 @@ async function up() {
     },
   });
 
+  const pizza7 = await prisma.product.create({
+    data: {
+      name: 'Four Seasons',
+      imageUrl: 
+            'https://media.dodostatic.net/image/r:292x292/11EE7D5F92DFCD9E84600C4DD6B916D4.avif',
+      categoryId: 1,
+      ingredients: {
+        connect: _ingredients.slice(0, 40),
+      },
+    },
+  });
+
   await prisma.productItem.createMany({
     data: [
       // Пицца "Пепперони фреш"
@@ -166,6 +178,14 @@ async function up() {
       generateProductItem({ productId: pizza6.id, pizzaType: 1, size: 20 }),
       generateProductItem({ productId: pizza6.id, pizzaType: 2, size: 30 }),
       generateProductItem({ productId: pizza6.id, pizzaType: 2, size: 40 }),
+
+      // Пицца Четыре сезона
+      generateProductItem({ productId: pizza7.id, pizzaType: 1, size: 20 }),
+      generateProductItem({ productId: pizza7.id, pizzaType: 1, size: 30 }),
+      generateProductItem({ productId: pizza7.id, pizzaType: 1, size: 40 }),
+      generateProductItem({ productId: pizza7.id, pizzaType: 2, size: 20 }),
+      generateProductItem({ productId: pizza7.id, pizzaType: 2, size: 30 }),
+      generateProductItem({ productId: pizza7.id, pizzaType: 2, size: 40 }),
 
       // Остальные продукты
       generateProductItem({ productId: 1 }),
