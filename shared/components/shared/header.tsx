@@ -28,11 +28,11 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
     let toastMessage = '';
 
     if (searchParams.has('paid')) {
-      toastMessage = 'Заказ успешно оплачен! Информация отправлена на почту.';
+      toastMessage = 'Order successfully paid! Information sent to email.';
     }
 
     if (searchParams.has('verified')) {
-      toastMessage = 'Почта успешно подтверждена!';
+      toastMessage = 'Email successfully verified!';
     }
 
     if (toastMessage) {
@@ -53,8 +53,8 @@ export const Header: React.FC<Props> = ({ hasSearch = true, hasCart = true, clas
           <div className="flex items-center gap-4">
             <Image src="/logo.png" alt="Logo" width={35} height={35} />
             <div>
-              <h1 className="text-2xl uppercase font-black">Next Pizza</h1>
-              <p className="text-sm text-gray-400 leading-3">вкусней уже некуда</p>
+              <h1 className="text-2xl uppercase font-black">Code and Pizza</h1>
+              <p className="text-sm text-gray-400 leading-3">it couldn't be tastier</p>
             </div>
           </div>
         </Link>
