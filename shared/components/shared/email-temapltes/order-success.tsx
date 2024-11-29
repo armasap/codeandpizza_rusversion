@@ -16,9 +16,22 @@ export const OrderSuccessTemplate: React.FC<Props> = ({ orderId, items }) => (
 
     <ul>
       {items.map((item) => (
-        <li key={item.id}>
-          {item.productItem.product.name} | {item.productItem.price} ₽ x {item.quantity} шт. ={' '}
-          {item.productItem.price * item.quantity} ₽
+        <li key={item.id} className="flex items-center gap-4 mb-4">
+          {/* Фото продукта */}
+          <img
+            src={item.productItem.product.imageUrl}
+            alt={item.productItem.product.name}
+            className="w-16 h-16 object-cover rounded"
+          />
+
+          {/* Информация о продукте */}
+          <div>
+            <p className="font-bold">{item.productItem.product.name}</p>
+            <p>
+              {item.productItem.price} ₽ x {item.quantity} шт. ={' '}
+              {item.productItem.price * item.quantity} ₽
+            </p>
+          </div>
         </li>
       ))}
     </ul>
