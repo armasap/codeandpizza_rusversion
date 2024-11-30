@@ -32,14 +32,14 @@ export const LoginForm: React.FC<Props> = ({ onClose }) => {
         throw Error();
       }
 
-      toast.success('Вы успешно вошли в аккаунт', {
+      toast.success('You have successfully logged into your account.', {
         icon: '✅',
       });
 
       onClose?.();
     } catch (error) {
       console.error('Error [LOGIN]', error);
-      toast.error('Не удалось войти в аккаунт', {
+      toast.error('Failed to log in to your account', {
         icon: '❌',
       });
     }
