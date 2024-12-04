@@ -27,11 +27,11 @@ export const Filters: React.FC<Props> = ({ className }) => {
 
   return (
     <div className={className}>
-      <Title text="Фильтрация" size="sm" className="mb-5 font-bold" />
+      <Title text="Filtration" size="sm" className="mb-5 font-bold" />
 
       {/* Верхние чекбоксы */}
       <CheckboxFiltersGroup
-        title="Тип теста"
+        title="Type of dought"
         name="pizzaTypes"
         className="mb-5"
         onClickCheckbox={filters.setPizzaTypes}
