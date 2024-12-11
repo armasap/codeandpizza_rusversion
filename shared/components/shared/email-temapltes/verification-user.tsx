@@ -11,7 +11,7 @@ export const VerificationUserTemplate: React.FC<Props> = ({ code }) => (
     </p>
 
     <p>
-      <a href={`http://localhost:3000/api/auth/verify?code=${code}`}>Confirm registration</a>
+      <a href={`https://codeandpizza-rusversion.vercel.app/api/auth/verify?code=${code}`}>Confirm registration</a>
     </p>
   </div>
 );
